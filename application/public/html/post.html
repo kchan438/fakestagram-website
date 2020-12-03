@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Image Post</title>
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="/stylesheets/flexbox.css">
+    <script defer src="/frontend/frontend.js"></script>
+    <script defer src="/frontend/loggedincheck.js"></script>
+    <script defer src="/frontend/imagepostdata.js"></script>
+</head>
+
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/allimages">Images</a></li>
+        <li><a href="/postimage" id="post-button">Post</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/login" id="login-button">Login</a></li>
+        <!-- <li><a href="/logout" id="logout-button">Logout</a></li> -->
+        <li><a href="/registration">Register</a></li>
+        <li><a href="/searchresults">Search</a></li>
+        <!-- <input type="text" id="searchbar" name="search" class="search-input" placeholder="Search"> -->
+        <!-- <input id="searchsubmit" type="submit" onclick="" name="searchsubmit" value="Submit"> -->
+    </ul>
+</nav>
+
+<body>
+
+    <!--This is where we see each individual post of the image a user posts.-->
+    <div id="post-image-id">
+        <img id="posted-image" src="">
+    </div>
+    <div id="info-box">
+        <div id="details-div">
+            <header id="image-post-title">
+                <h2 id="image-post-title-text">Title: </h4>
+            </header>
+            <div id="image-post-author" class="info-tags">Author: </div>
+            <div id="image-post-created" class="info-tags">Created: </div>
+            <div id="image-post-description" class="info-tags">Description: </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

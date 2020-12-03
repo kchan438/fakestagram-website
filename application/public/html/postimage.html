@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+    <script defer src="/frontend/frontend.js"></script>
+    <script defer src="/frontend/loggedincheck.js"></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <!-- <script defer src="/frontend/createpost.js"></script> -->
+    <title>Post Image Page</title>
+</head>
+
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/allimages">Images</a></li>
+        <li><a class="active" href="/postimage" id="post-button">Post</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/login" id="login-button">Login</a></li>
+        <!-- <li><a href="/logout" id="logout-button">Logout</a></li> -->
+        <li><a href="/registration">Register</a></li>
+        <li><a href="/searchresults">Search</a></li>
+        <!-- <input type="text" id="searchbar" name="search" class="search-input" placeholder="Search"> -->
+        <!-- <input id="searchsubmit" type="submit" onclick="" name="searchsubmit" value="Submit"> -->
+    </ul>
+</nav>
+
+<body>
+    <h1 id="postimagetitle"><u>Post Image</u></h1>
+    <form id="post-id-form" method="POST" enctype="multipart/form-data">
+        <!-- action="/posts/createPost" -->
+        <label for="title">Title:</label><br>
+        <input type="text" id="imagetitle" name="imagetitle" placeholder="Image Title"><br>
+
+        <label for="description">Description:</label><br>
+        <input type="text" id="imagedescription" name="imagedescription" placeholder="Description"><br></br>
+
+        <label for="img">Your image:</label>
+        <input type="file" id="imagepath" name="image-path"><br><br>
+
+        <input type="checkbox" id="rules" name="upload-check">
+        <label for="rules">You accept <strong>Accountable Use Policy</strong> for uploading images.</label><br><br>
+
+        <input id="post-button" type="submit" value="Submit">
+    </form>
+
+    <script>
+        //wraps a closure around this
+        const _form = document.getElementById('post-id-form')
+        _form.onsubmit = function (event) {
+            //tells it when on event, dont go to default process, "do what is in here"
+            event.preventDefault();
+            let _body = new FormData(_form);
+            _body.append('title', document.getElementById('imagetitle').textContent)
+
+            fetch('posts/createPost', {
+                body: _body,
+                method: "POST"
+            })
+                .then((data) => {
+                    console.log(data);
+                    return data.json();
+                })
+                .then((dataHasObject) => {
+                    console.log(dataHasObject);
+                    alert(dataHasObject.message);
+                    location.replace(dataHasObject.redirect);
+                })
+                .catch(err => console.log(err));
+
+            // axios('/posts/createPost', {
+            //     data: _body,
+            //     method: "POST"
+            // })
+            // .then((data) => {
+            //     console.log(data);
+            //     alert(data.message);
+            //     location.replace(data.redirect);
+            // })
+            // .catch(err => console.log(err));
+        }
+    </script>
+</body>
+
+</html>

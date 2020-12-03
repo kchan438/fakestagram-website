@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+    <script defer src="/frontend/frontend.js"></script>
+    <script defer src="/frontend/loggedincheck.js"></script>
+    <script defer src="/frontend/registrationinvalid.js"></script>
+    <title>Registration Page</title>
+</head>
+
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/allimages">Images</a></li>
+        <li><a href="/postimage" id="post-button">Post</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/login" id="login-button">Login</a></li>
+        <!-- <li><a href="/logout" id="logout-button">Logout</a></li> -->
+        <li><a class="active" href="/registration">Register</a></li>
+        <li><a href="/searchresults">Search</a></li>
+        <!-- <input type="text" id="searchbar" name="search" class="search-input" placeholder="Search"> -->
+        <!-- <input id="searchsubmit" type="submit" onclick="" name="searchsubmit" value="Submit"> -->
+    </ul>
+</nav>
+
+<body>
+    <h1 id="resgistrationtitle"><u>Registration</u></h1><br>
+
+    <form id="registration-form" class="reg" action="/dbtest/createUser" method="POST" enctype="x-www-form-urlencoded">
+        <label for="username" id="username-label">Username:</label><br>
+        <input type="text" id="username-input-id" name="username" placeholder="Username"><br><br>
+
+        <label for="email" id="email-label">Email Address:</label><br>
+        <input type="email" id="email-input-id" name="email" placeholder="Email"><br><br>
+
+        <label for="password" id="password-label">Password:</label><br>
+        <input type="password" id="password-input" name="password" placeholder="Password"><br><br>
+
+        <label for="confirmpassword" id="confirm-password-label"> Confirm Password:</label><br>
+        <input type="password" id="confirm-password-input" name="confirm-password"
+            placeholder="Confirm Password"><br><br><br>
+
+        <input type="checkbox" id="age-check-input" name="agecheck">
+        <label for="agecheck" id="age-check-label">You are 13 or older of age.</label><br>
+
+        <input type="checkbox" id="rules-check-input" name="rulescheck">
+        <label for="rulescheck" id="rules-check-label">You accept TOS and Privacy Rules.</label><br>
+        <a href="" id="TOS-label">TOS and Privacy Rules.</a><br><br><br>
+
+        <script>
+                //if username matches another in the database, return error message in red
+                //if email matches another in the database, return error message in red
+                //if password doesn't match confirmpassword, return error message in red
+        </script>
+
+        <input id="registration-button" type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

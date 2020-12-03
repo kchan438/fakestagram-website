@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+    <script src="../frontend/registrationerrors.js"></script>
+    <script defer src="/frontend/loggedincheck.js"></script>
+    <title>Registration Page</title>
+</head>
+
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/allimages">Images</a></li>
+        <li><a href="/postimage" id="post-button">Post</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a class="active" href="/registration">Register</a></li>
+        <li><a href="/searchresults">Search</a></li>
+        <!-- <input type="text" id="searchbar" name="search" class="search-input" placeholder="Search"> -->
+        <!-- <input id="searchsubmit" type="submit" onclick="" name="searchsubmit" value="Submit"> -->
+    </ul>
+</nav>
+
+<body>
+    <h1 id="resgistrationtitle"><u>Registration</u></h1><br>
+
+    <form id="registration-failed-form" class="reg" action="/dbtest/createUser" method="POST"
+        enctype="x-www-form-urlencoded">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password" id="password-label-id">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="confirmpassword" id="confirmpassword-label-id"> Confirm Password:</label><br>
+        <input type="password" id="confirmpassword" name="confirmpassword"><br><br><br>
+        <!-- onsubmit=checkPassword(getElementByID(password).value,this.value,getElementByID(password-label-id).value,getElementByID(confirmpassword-label-id).value) -->
+
+        <input type="checkbox" id="agecheck" name="agecheck">
+        <label id="agecheck-label-id" for="agecheck">You are 13 or older of age.</label><br>
+
+        <input type="checkbox" id="rulescheck" name="rulescheck">
+        <label id="rulescheck-label-id" for="rulescheck">You accept TOS and Privacy Rules.</label><br>
+        <a href="">TOS and Privacy Rules.</a><br><br><br><br>
+
+        <p id="tryagain">*Try registering again.</p>
+
+        <input id="button" type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

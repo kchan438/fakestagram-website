@@ -1,0 +1,17 @@
+users
+    id
+    username
+    email
+    password
+    usertype
+    active
+    created
+
+posts
+    idtitle
+    description
+    photopath
+    thumbail
+    active
+    created
+    fk_userid

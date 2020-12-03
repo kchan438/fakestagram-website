@@ -1,0 +1,158 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  width: 800px;
+  border: .1em solid grey;
+  background-color: white;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 2%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* form {
+    background-color: lightgoldenrodyellow;
+    text-align: left;
+    width: 270px;
+    border: .1em solid grey;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+} */
+
+html {
+  background-color: lightgrey;
+  margin: auto;
+  width: 1050px;
+}
+
+ul {
+  list-style-type: none;
+  margin: auto;
+  /* margin-left: 10px; */
+  /* margin-top: auto; */
+  /* margin-right: auto; */
+  /* margin-bottom: auto; */
+  padding: 10px;
+  background-color: lightgoldenrodyellow;
+  text-align: center;
+  width: 570px;
+  /* width: 620px; */
+  height: 30px;
+  border: .1em solid grey;
+  font-weight: bold;
+}
+
+li {
+  display: inline;
+  padding: 5px;
+}
+
+li a:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+.active {
+  font-weight: bold;
+  color: black;
+}
+
+#logoutmessage,
+#loginmessage,
+#registrationmessage {
+  padding-top: 25px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#aboutmessage {
+  background-color: lightgoldenrodyellow;
+  text-align: left;
+  width: 270px;
+  border: .1em solid grey;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  padding-top:  25px;
+  padding-bottom: 25px;
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#loginform,
+#post-id-form,
+#registration-form,
+#registration-failed-form,
+#loginmessage,
+#post-failed-message,
+#logoutmessage {
+    background-color: lightgoldenrodyellow;
+    text-align: left;
+    width: 270px;
+    border: .1em solid grey;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+
+#tryagain {
+  visibility: visible;
+  color:red;
+  text-align: center;
+}
+
+#searchsubmit {
+  visibility: visible;
+}
+
+#searchform {
+  padding: 10px;
+  margin-left: 500px;
+  margin-bottom: 00px;
+  width: 150px;
+}
+
+#login-error-message {
+  color: hidden;
+}
+
+#post-image-id {
+  border: .1em solid black;
+  background-color: lightgoldenrodyellow;
+  margin-left: 120px;
+  width:590px;
+  height: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* padding-left: 25px; */
+  margin-top: 20px;
+  text-align: center;
+}
+
+#info-box {
+  border: .1em solid black;
+  background-color: lightgoldenrodyellow;
+  margin-left: 120px;
+  margin-top: 50px;
+  width: 590px;
+  height: 150px;
+  padding-left: 3px;
+}

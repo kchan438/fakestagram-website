@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Login Credentials Page</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets\stylesheet.css">
+    <script defer src="/frontend/frontend.js"></script>
+    <script defer src="/frontend/loggedincheck.js"></script>
+    <script defer src="/frontend/logininvalid.js"></script>
+</head>
+
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/allimages">Images</a></li>
+        <li><a href="/postimage" id="post-button">Post</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/login" id="login-button">Login</a></li>
+        <li><a href="/registration">Register</a></li>
+        <li><a href="/searchresults">Search</a></li>
+        <!-- <input type="text" id="searchbar" name="search" class="search-input" placeholder="Search"> -->
+        <!-- <input id="searchsubmit" type="submit" onclick="" name="searchsubmit" value="Submit"> -->
+    </ul>
+</nav>
+
+<body>
+    <h1 id="logincredentialstitle"><u>Login Credentials</u></h1>
+    <form id="loginform" action="/dbtest/validatelogin" method="POST" enctype="application/x-www-form-urlencoded">
+        <h2><u>Sign-in</u></h2>
+
+        <label for="loginusername">Username:</label><br>
+        <input type="text" id="loginusername" name="loginusername" placeholder="Username"><br><br>
+
+        <label id="loginpassword" for="loginpassword">Password:</label><br>
+        <input type="password" id="loginpassword" name="loginpassword" placeholder="Password"><br></br>
+
+        <p id="login-error-message"> *Username or password is invalid.</p>
+
+        <input id="login-submit-button" type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
