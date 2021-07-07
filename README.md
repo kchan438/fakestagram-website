@@ -35,8 +35,3 @@ Please follow the instructions below and fill in the information requested when 
 2. Type in "npm start" in terminal
 3. Make sure MySQL database in running  and logged in   on Workbench
 4. Go to browser, type in "localhost:3000"
-
-
-# Comments
-
-I didn't follow the MVC layout for this project because I needed more time with studying for my other finals. But this will be something I will follow up with once finals are over regardless that it won't count for anything but more for my personal experience with web development. I appreciate the help you've provided for me throughout the semester and hope to see you again in future classes!
